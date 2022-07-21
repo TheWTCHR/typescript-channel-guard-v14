@@ -27,7 +27,7 @@ async function punish(memberID: string, type: string) {
         await member.guild.bans.create(member.id, {reason: "Witcher Guard"}).catch(_err => {});
     } else if(type == "jail"){
         let roller = [config.jailRole];
-        let roles = member.roles.cache.clone().filter(e => e.managed).map(e => e.id).concat(roller);
+        let roles = member.roles.cache.clone().filter(e => e.editable).map(e => e.id).concat(roller);
         return await member.roles.set(roles, "Witcher Guard").catch(_err => {});
     } else {
         console.error("Geçerli bir ceza tipi giriniz.")
