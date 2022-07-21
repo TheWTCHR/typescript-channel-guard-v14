@@ -5,7 +5,7 @@ import safeUserData from './models/safeUser';
 import safeRoleData from './models/safeRole';
 
 const client = new Client({
-    intents: [GatewayIntentBits.MessageContent, GatewayIntentBits.GuildMembers, GatewayIntentBits.GuildMessages, GatewayIntentBits.Guilds],
+    intents: [GatewayIntentBits.MessageContent, GatewayIntentBits.GuildMembers, GatewayIntentBits.GuildMessages, GatewayIntentBits.Guilds, GatewayIntentBits.GuildPresences],
     partials: [Partials.Message]
 });
 
